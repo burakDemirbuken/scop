@@ -1,12 +1,12 @@
 #version 330 core
 out vec4 FragColor;
+in vec3 color;
+in vec2 texCoord;
 
-// C++'tan gelecek olan zaman verisi
-uniform float oyunZamani; 
+uniform sampler2D texture0;
+uniform sampler2D texture1;
 
 void main()
 {
-    // Zamanı kullanarak renklerin yanıp sönmesini sağla
-    float a = (sin(oyunZamani) / 2.0f) + 0.5f; 
-    FragColor = vec4(0.0f, a, 0.0f, 1.0f); // Renkleri ayarla
+    FragColor = mix(texture(texture0, texCoord), texture(texture1, texCoord), 0.2);
 }

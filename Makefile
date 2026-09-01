@@ -2,12 +2,12 @@ NAME = scop
 
 CXX = c++
 CC = cc
-CXXFLAGS = -I glad/include
+CXXFLAGS = -I lib/ -I lib/glad/include/
 LDFLAGS = -lglfw -lGL -lX11 -lpthread -lXrandr -lXi -ldl
 OBJDIR = obj
 
 SRC = main.cpp \
-	glad/src/glad.c \
+	lib/glad/src/glad.c \
 	Shader/Shader.cpp \
 	Shader/ShaderProgram.cpp
 
