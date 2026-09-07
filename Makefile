@@ -9,7 +9,9 @@ OBJDIR = obj
 SRC = main.cpp \
 	lib/glad/src/glad.c \
 	Shader/Shader.cpp \
-	Shader/ShaderProgram.cpp
+	Shader/ShaderProgram.cpp \
+	Camera/Camera.cpp \
+
 
 OBJ = $(patsubst %.cpp,$(OBJDIR)/%.o,$(filter %.cpp,$(SRC))) $(patsubst %.c,$(OBJDIR)/%.o,$(filter %.c,$(SRC)))
 
