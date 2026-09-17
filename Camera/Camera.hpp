@@ -32,10 +32,11 @@ class Camera
 
 	public:
 
-		Camera(glm::vec3 position, glm::vec3 direction, float speed = 1.0f, float sensitivity = 0.1f, float pitch = 0.0f, float yaw = 0.0f, float roll = 0.0f);
+		Camera(glm::vec3 position, glm::vec3 direction, float speed = 1.0f, float sensitivity = 0.1f, float pitch = 0.0f, float yaw = -90.0f, float roll = 0.0f);
 		~Camera();
 
 		glm::mat4	getViewMatrix() const;
+		glm::vec3	getPosition() const;
 
 		void	processKeyboard(Camera_Movement direction, float deltaTime);
 		void	processMouseMovement(double xoffset, double yoffset, bool constrainPitch = true);

@@ -18,6 +18,11 @@ glm::mat4	Camera::getViewMatrix() const
 	return glm::lookAt(position, position + direction, glm::vec3(0.0f, 1.0f, 0.0f));
 }
 
+glm::vec3	Camera::getPosition() const
+{
+	return position;
+}
+
 void	Camera::processKeyboard(Camera_Movement direction, float deltaTime)
 {
 	if (direction == FORWARD)

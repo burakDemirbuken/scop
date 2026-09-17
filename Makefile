@@ -2,7 +2,7 @@ NAME = scop
 
 CXX = c++
 CC = cc
-CXXFLAGS = -I lib/ -I lib/glad/include/
+CXXFLAGS = -I . -I lib/ -I lib/glad/include/
 LDFLAGS = -lglfw -lGL -lX11 -lpthread -lXrandr -lXi -ldl
 OBJDIR = obj
 
@@ -11,6 +11,8 @@ SRC = main.cpp \
 	Shader/Shader.cpp \
 	Shader/ShaderProgram.cpp \
 	Camera/Camera.cpp \
+	Input/Input.cpp \
+	Renderer/Renderer.cpp \
 
 
 OBJ = $(patsubst %.cpp,$(OBJDIR)/%.o,$(filter %.cpp,$(SRC))) $(patsubst %.c,$(OBJDIR)/%.o,$(filter %.c,$(SRC)))

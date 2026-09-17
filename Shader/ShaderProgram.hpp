@@ -4,6 +4,7 @@
 
 #include <string>
 #include <glm/glm.hpp>
+#include "glad/glad.h"
 
 class ShaderProgram
 {
@@ -12,6 +13,8 @@ class ShaderProgram
 		ShaderProgram &operator=(const ShaderProgram &) = delete;
 		
 		unsigned int _id;
+
+		GLint getUniformLocation(const std::string &name) const;
 		
 	public:
 		ShaderProgram();
