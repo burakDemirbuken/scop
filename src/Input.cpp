@@ -1,4 +1,4 @@
-#include "Input.hpp"
+#include "scop/Input.hpp"
 
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>

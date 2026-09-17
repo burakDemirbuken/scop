@@ -1,6 +1,6 @@
-#include "ShaderProgram.hpp"
+#include "scop/ShaderProgram.hpp"
 #include "glad/glad.h"
-#include "Shader.hpp"
+#include "scop/Shader.hpp"
 #include <stdexcept>
 #include <iostream>
 

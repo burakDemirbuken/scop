@@ -1,4 +1,4 @@
-#include "Shader.hpp"
+#include "scop/Shader.hpp"
 #include <fstream>
 #include <sstream>
 

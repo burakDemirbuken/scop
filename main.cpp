@@ -1,6 +1,6 @@
-#include "Camera/Camera.hpp"
-#include "Input/Input.hpp"
-#include "Renderer/Renderer.hpp"
+#include "scop/Camera.hpp"
+#include "scop/Input.hpp"
+#include "scop/Renderer.hpp"
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
 #include <iomanip>
@@ -48,9 +48,11 @@ int main()
 	try
 	{
 		Renderer renderer;
+
 		double lastFpsUpdateTime = glfwGetTime();
 		int frameCount = 0;
 		float lastTime = 0.0f;
+		
 		while (!glfwWindowShouldClose(window))
 		{
 			float currentTime = glfwGetTime();
